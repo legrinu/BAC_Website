@@ -3,12 +3,22 @@
 
 
 /* Elementselektoren */
-
+a {
+    display:block;
+    padding: 10px;
+    width: auto;
+    max-width: 10%;
+    border: 1px solid black;
+}
 
 
 /* Klassen-Selektoren */
 
 
-
 /* ID-Selektoren überschreibt alle vorherigen Selektoren*/
+
+
+
+
+
 
