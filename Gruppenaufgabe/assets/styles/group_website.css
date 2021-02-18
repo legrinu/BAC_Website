@@ -42,7 +42,16 @@ ul {
     height:1000px;
 }
 
+#footer_text{    
+  color: red;
+}
 
-
-
+#footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #093a80;
+  text-align: center;
+}
 
