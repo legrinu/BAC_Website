@@ -14,7 +14,8 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    min-width: 160px;
+    min-width: 200px;
+    max-width: 300px;
     width: 15%;
     background-color: #f1f1f1;
     position: fixed;
@@ -50,8 +51,8 @@ li a {
   height:1000px;
 }
 
-#footer_text{    
-  color: #b72424;
+#footer_text{    /*Roter Color Code von Logo: #b72424 */
+  color: white;
 }
 
 #footer{
