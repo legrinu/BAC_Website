@@ -17,7 +17,6 @@ ul {
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
-    overflow: auto;
   }
   
   li a {
@@ -47,7 +46,7 @@ ul {
 }
 
 #footer_text{    
-  color: red;
+  color: #b72424;
 }
 
 #footer{
