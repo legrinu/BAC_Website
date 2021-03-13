@@ -48,8 +48,20 @@ li a {
 
 #content{
   margin-left:15%;
+  margin-bottom: 24px;
   padding:1px 16px;
-  height:1000px;
+}
+
+#h_title{
+  margin-top: 30px;
+}
+
+#second_headline{
+  margin-top: 20px;
+}
+
+#group_image{
+  margin-top: 20px;
 }
 
 #footer_text{    /*Roter Color Code von Logo: #b72424 */
