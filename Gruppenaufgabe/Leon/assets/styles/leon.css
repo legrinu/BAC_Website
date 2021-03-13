@@ -1,0 +1,221 @@
+/* Kommentar im CSS-Block */
+/* All-Selektor */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1f1f1;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+/* Elementselektoren */
+
+html{
+  background: url(../images/whisky_bckgr.webp) no-repeat center center fixed ;
+  background-size: cover;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 0.6rem;
+  }
+}
+
+article{
+  margin-bottom: 20px;
+  padding: 0px 12px;
+}
+
+header > h1{
+  margin-top: 12px;
+}
+
+article > p{
+  background-color: rgba(18, 18, 18, 0.8);
+  margin-bottom: 12px;
+}
+
+
+a{
+  cursor:pointer;
+}
+
+/* Klassen-Selektoren */
+
+/* Menü Overlay */
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgb(18, 18, 18);
+  background-color: rgba(18, 18, 18, 0.9);
+  overflow-y: hidden; /* Kein horizontaler Scroll */
+  transition: 0.5s;
+}
+
+/* Position im Overlay */
+.overlay_content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Links im Menü ohne Unterstriche, fancy design */
+.overlay_content a {
+  margin: 0 35%;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+
+/* Close-Button in die obere rechte Ecke*/
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* Menü Icon oben links, fixed */
+.open_nav{
+  position: fixed;
+  top:12px;
+  left: 12px;
+  background-color: rgba(18, 18, 18, 0.8);
+  border: white 1px solid;
+  border-radius: 2px;
+  padding: 12px 20px;
+  cursor: pointer; 
+}
+
+/* Menu Overlay Ende */
+
+/* Hintergrund für jeden Inhalt */
+.content_bckgr{
+  background-color: rgba(18, 18, 18, 0.8);
+  transition: all, .5s, ease-in-out;
+  border: white 1px solid;
+  border-radius: 15px;
+}
+
+/* Alles, was einen Hover-Effekt hat, soll gleich hovern */
+.hover_class:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 9px white;
+}
+
+/* Alle Buttons im PDF-Viewer sollen Material Design blau sein und auf gleichem Level abgesetzt sein */
+.viewer_btn{
+  background-color: #3700B3;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ID-Selektoren*/
+
+/* Jeder Inhalt ist in der Mitte */
+#content{
+  text-align: center;
+  padding:1px 16px;  
+  margin-left: 10%;
+  margin-right: 10%;
+  width:80%;
+}
+
+/* Überschrift mit Abstand nach oben und unten */
+#top_name{
+  padding: 20px 0px;
+  margin: 25px 0;
+}
+
+/* Video und Audio mit 20px Abstand nach unten */
+#video_top, #audio_plop{
+  margin-bottom: 20px;
+}
+
+/* PDF Viewer */
+
+/* Viewer genau in der Mitte */
+#viewer{
+  margin:auto;
+}
+
+/* Überschrift für den Viewer mit schönem Abstand */
+#viewer_header > h2{
+  padding: 12px 0;
+  margin-bottom: 6px;
+}
+
+/* Abgrenzung der Buttons zur PDF */
+#top_bar{  
+  border-bottom: white 2px solid;
+}
+
+/* Design der Buttons, um Abstände zu wahren */
+#prev_page{
+  margin-right: 12px;
+}
+
+#next_page{
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+#download_link{
+  text-decoration: none;
+}
+
+/* Text-Input schöner designen und Border entfernen */
+#pdf_act_page{
+  margin: 0;
+  padding: 0;
+  width: 12px;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-bottom-style: groove;
+  font-size: 1.2rem;
+}
+
+#pdf_act_page:focus{
+  outline:none;
+}
+
+/* Die PDF braucht etwas Abstand zur oberen Border */
+#pdf{
+  padding-top: 12px;
+}
+
+/* PDF Viewer End */
+
+
+
+
+

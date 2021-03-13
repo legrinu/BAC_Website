@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<!-- metadata -->
+<head>
+<title>Whiskyhood</title>	
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta name="description" content="Whiskyhood, der Whiskyhändler Ihres Vertrauens" />
+<meta name="keywords" content="Whisky, Shop" />
+<meta name="author" content="leon.mikolajczak" />
+<meta name="robots" content="noindex" />
+
+<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link href="assets/styles/leon.css" rel="stylesheet" type="text/css" />
+<link href="favicon.ico" rel="icon" type="image/ico"/>
+</head>
+
+<!-- visible content -->
+<body>
+	<div id="wrapper">
+
+		<nav id="nav_bar" class="overlay">	
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+				<i class="far fa-times-circle"></i>
+			</a>
+			<div class="overlay_content">		
+				<a class="hover_class" href="../group_website.html">Startseite</a> 
+				<a class="hover_class" href="https://wurstwasser.xyz/">Lukas Blesius</a> 
+				<a class="hover_class" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Lukas Weier</a> 
+				<a class="hover_class" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Sören Scheibner</a> 
+				<a class="hover_class" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Jonathan Kößmeier</a> 
+			</div>
+		
+			<div id="open_nav_bar">
+				<span class="open_nav hover_class" onclick="openNav()">
+					<i class="fas fa-bars"></i>
+					Menü
+				</span>
+				<script>
+					/* Auf */
+					function openNav() {
+					document.getElementById("nav_bar").style.height = "100%";
+					}
+					
+					/* Zu */
+					function closeNav() {
+					document.getElementById("nav_bar").style.height = "0%";
+					} 
+				</script>
+			</div>
+
+		</nav>
+
+		
+		<div id="content">
+
+			<h1 id="top_name" class="content_bckgr">Whiskyhood - Ihr Whiskyfachhändler</h1>
+
+			<article class="content_bckgr">
+				<header>
+					<h2>Unsere Top Whiskys</h2>
+				</header>
+
+				<article class="hover_class content_bckgr">
+					<header>
+						<h2>Bushmills 10</h2>
+					</header>
+					<p>Der Bushmills 10 überzeugt jeden Fan von mildem Whiskey. Der Ire kombiniert einen Hauch von Vanille und Schokolade mit Sherry Noten,
+						die ihm seinen einzigartigen Geschmack verleihen. 
+						Er stammt von der ältesten legalen Brauerei Irlands, hier wird Tradition noch groß geschrieben.
+						Für nur 30€ ist er es Wert probiert zu werden.
+					</p>
+				</article>
+
+				<article class="hover_class content_bckgr">
+					<header>
+						<h2>Clynelish 14</h2>
+					</header>
+					<p>Der Klassiker. Ein echter Highland Whisky, der den Trinker direkt in die 50er Jahre versetzt.
+						Wer hat sich nicht schon immer gefragt, wie der Whisky der Bond Bösewichte schmeckt?
+						Die Noten von Kerzenwachs und einem Blumenbeet am schottischen Strand schreien nach Fernweh.
+						Eine Empfehlung für jeden, der nicht bereit ist tausende von Euros für 50 Jahre alte Whiskys auszugeben, den Geschmack dieser aber trotzdem erleben möchte.
+					</p>
+				</article>
+
+				<article class="hover_class content_bckgr">
+					<header>
+						<h2>Stauning Bastard</h2>
+					</header>
+					<p>Stauning ist eine junge Brennerei, die den dänischen Whisky berühmt gemacht hat.
+						Mit dem Bastard wagen sie sich an ein neues Experiment, welches direkt gelingt.
+						3 Jahre Reifung in Weißeichenfässern und 6 Monate Reifung in Mezcal Fässern ergibt einen einzigartigen, neuen Geschmack.
+						Wer mit Geschmack experimentieren möchte, der ist hier definitiv nicht falsch.
+					</p>
+				</article>
+			</article>
+
+			<video id="video_top" class="content_bckgr" width="360" height="360" controls poster="assets/images/VideoThumb.png">
+				<source src="assets/videos/TopWhiskys.mp4" type="video/mp4">
+				<source src="assets/videos/TopWhiskys.webm" type="video/webm">
+				Error: Ihr Browser scheint den Video-Tag nicht zu unterstützen.
+			</video>
+
+			<br/>
+
+			<div class="content_bckgr" id="audio_cont">
+				<p>Wie sich eine Flasche beim Öffnen anhört:</p>
+				<audio id="audio_plop" class="content_bckgr" controls>
+					<source src="assets/audios/Plopp.mp3" type="audio/mp3">
+					<source src="assets/audios/Plopp.ogg" type="audio/ogg">
+					Error: Ihr Browser scheint den Audio-Tag nicht zu unterstützen.
+				</audio>
+			</div>
+
+			<div id="viewer" class="content_bckgr">
+				<header id="viewer_header">
+					<h2>Unser Whisky Bericht 2020</h2>
+				</header>
+
+				<div id="top_bar">
+
+					<form onsubmit="return newPage()" id="pdf_page">
+
+						<button type="button" class="hover_class viewer_btn" id="prev_page">
+							<i class="fas fa-chevron-circle-left"></i>
+							Vorherige Seite
+						</button>
+
+						Seite 
+						<input type="text" name="page" id="pdf_act_page">
+						<input type="submit" hidden>
+						von 
+						<span class="page_count"></span>
+
+						<button type="button" class="hover_class viewer_btn" id="next_page">
+							Nächste Seite
+							<i class="fas fa-chevron-circle-right"></i>
+						</button>
+	
+						<button type="button"  class="hover_class viewer_btn" onclick="window.open('assets/pdf/WhiskyBericht.pdf')">
+							<i class="fa fa-download"></i> Download
+						</button>
+
+					</form>
+					
+				</div>
+
+				<div id="pdf">
+					<canvas id="render_pdf">
+						Error: Ihr Browser scheint keine Canvas zu unterstützen.
+					</canvas>
+				</div>
+				<div id="viewer_code">
+					<script src="assets/javascript/pdfviewer.js"></script>
+				</div>
+
+			</div><!-- end viewer -->
+			
+		</div><!-- #content -->
+	</div> <!-- wrapper -->
+</body>
+
+</html>
