@@ -163,7 +163,7 @@ a{
 }
 
 /* Video und Audio mit 20px Abstand nach unten */
-#video_top, #audio_plop{
+#video_top, #audio_cont, #audio_plop{
   margin-bottom: 20px;
 }
 
@@ -171,7 +171,7 @@ a{
 
 /* Viewer genau in der Mitte */
 #viewer{
-  margin:auto;
+  margin-bottom: 20px;
 }
 
 /* Überschrift für den Viewer mit schönem Abstand */
@@ -217,7 +217,7 @@ a{
 
 /* Die PDF braucht etwas Abstand zur oberen Border */
 #pdf{
-  padding-top: 12px;
+  padding: 12px 0;
 }
 
 /* PDF Viewer End */
