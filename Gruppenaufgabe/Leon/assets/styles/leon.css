@@ -90,15 +90,6 @@ a{
   transition: 0.3s;
 }
 
-
-/* Close-Button in die obere rechte Ecke*/
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
-
 /* Menü Icon oben links, fixed */
 .open_nav{
   position: fixed;
@@ -169,7 +160,7 @@ a{
 
 /* PDF Viewer */
 
-/* Viewer genau in der Mitte */
+/* Abstand zum Boden */
 #viewer{
   margin-bottom: 20px;
 }

@@ -22,10 +22,7 @@
 <body>
 	<div id="wrapper">
 
-		<nav id="nav_bar" class="overlay">	<!-- Start Menu -->
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-				<i class="far fa-times-circle"></i>
-			</a>
+		<nav id="nav_overlay" class="overlay">	<!-- Start Menu -->
 			<div class="overlay_content">		
 				<a class="hover_class" href="../index.html">Startseite</a> 
 				<a class="hover_class" href="../Lukasb/lukasb.html">Lukas Blesius</a> 
@@ -40,14 +37,16 @@
 					Menü
 				</span>
 				<script>
+					let open = false;
 					/* Auf */
 					function openNav() {
-					document.getElementById("nav_bar").style.height = "100%";
-					}
-					
-					/* Zu */
-					function closeNav() {
-					document.getElementById("nav_bar").style.height = "0%";
+						if(!open){
+							document.getElementById("nav_overlay").style.height = "100%";
+							open = true;
+						}else{
+							document.getElementById("nav_overlay").style.height = "0%";
+							open = false;
+						}
 					} 
 				</script>
 			</div>
