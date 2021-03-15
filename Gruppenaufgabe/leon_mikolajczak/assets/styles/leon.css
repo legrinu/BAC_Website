@@ -119,7 +119,7 @@ a{
   outline: none;
 }
 
-
+/* Wenn etwas fokussiert wird soll keine Outline erscheinen, stattdessen ein Box-Schatten */
 .hover_class:focus{
   box-shadow: 0px 0px 9px white;
   outline: none;
