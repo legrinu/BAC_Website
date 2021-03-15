@@ -86,6 +86,16 @@ const newPage = () => {
     return false; //Sonst wird die Seite neu geladen
 };
 
+//Bei Klick auf Canvas eine Seite vor
+const canvClick = () => {
+    if (pageNum >= pdfDoc.numPages){
+        pageNum = 1;
+    }else{
+        pageNum++;
+    }
+    queueRenderPage(pageNum);
+};
+
 //Das Dokument in die Library laden und die erste Seite rendern
 pdfjsLib.getDocument(doc_url).promise.then(pdfDoc_ =>{
     pdfDoc = pdfDoc_;
@@ -99,6 +109,9 @@ pdfjsLib.getDocument(doc_url).promise.then(pdfDoc_ =>{
 //Den Buttons die Funktionen zuweisen
 document.getElementById('prev_page').addEventListener('click', prevPage);
 document.getElementById('next_page').addEventListener('click', nextPage);
+
+//Dem Canvas die Funktion zuweisen
+canvas.addEventListener('click', canvClick);
 
 //Triggere das neu Rendern der aktuellen Seite, wenn das Fenster seine Größe ändert
 window.onresize = actPage;

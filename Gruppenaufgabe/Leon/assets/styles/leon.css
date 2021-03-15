@@ -211,6 +211,11 @@ a{
   padding: 12px 0;
 }
 
+/* Das Canvas soll als anklickbar erkannt werden */
+#render_pdf{  
+  cursor: pointer;
+}
+
 /* PDF Viewer End */
 
 
