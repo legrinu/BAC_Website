@@ -1,0 +1,182 @@
+:root {
+  --main-red: #fc0a1c;
+  --main-blue: #1d42be;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  overflow: scroll;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, monospace; /* letzte Schrift GENERISCH */
+  font-size: 1.2em;
+  line-height: 1.5em; /* Zeilenabstand */
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-bottom: 10px;
+  padding-left: 5px;
+  color: var(--main-red);
+}
+
+h1 {
+  font-size: 3em;
+  padding: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 2em;
+  padding: 10px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.6em;
+  padding: 10px;
+}
+
+p {
+  font-size: 1.2em;
+  padding: 10px;
+  color: #000;
+}
+
+nav li {
+  list-style: none;
+  font-size: 1.5em;
+  position: relative;
+  margin: 0 0 0.2em 0;
+  width: 12em;
+  /* Eigenschaften Navigation */
+}
+
+nav ul ul {
+  position: absolute;
+  top: 0;
+  left: 11.5em;
+  font: 0/0 serif;
+  /* Unternavigation ausblenden */
+
+  z-index: -1;
+  transition: font 0.5s;
+}
+
+nav ul li:hover ul,
+nav ul a:focus ~ ul {
+  font: inherit;
+  z-index: auto;
+  /*  Unternavigation einblenden */
+}
+
+@media (min-width: 45em) {
+  nav li {
+    font-size: 1em;
+  }
+}
+
+nav a {
+  display: block;
+  padding: 0.4em;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid var(--main-blue);
+  border-radius: 10px;
+  box-shadow: 0 5px 10px white inset;
+  color: gold;
+  background-color: var(--main-blue);
+  transition: all 0.25s ease-in;
+}
+
+nav li[aria-current] a {
+  background-color: var(--main-red);
+  color: gold;
+  /* Färbung aktueller Menüpunkt*/
+}
+
+nav a:focus,
+nav a:hover,
+nav li[aria-current] a:focus,
+nav li[aria-current] a:hover {
+  color: var(--main-blue);
+  background-color: gold;
+  /* Was passiert bei Mouseover */
+}
+
+.box_container {
+  display: flex;
+  list-style: none;
+  border: 3px solid var(--main-red);
+  margin-bottom: 50px;
+}
+
+.box_item {
+  display: flex;
+  background: #797575;
+  color: var(--main-red);
+  font-weight: bold;
+  font-size: 2em;
+  align-items: center;
+}
+
+.audio-size {
+  margin-top: 70px;
+  width: 2500px;
+  height: 100px;
+}
+
+/* Download button */
+.btn {
+  display: block;
+  padding: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid var(--main-blue);
+  border-radius: 10px;
+  box-shadow: 0 5px 10px white inset;
+  color: gold;
+  background-color: var(--main-blue);
+  transition: all 0.25s ease-in;
+  cursor: pointer;
+}
+
+.btn:hover {
+}
+
+#wrapper {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #aaa;
+}
+
+#header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+#canvas {
+  border: 3px solid var(--main-red);
+  margin-bottom: 50px;
+  width: fit-content;
+}
+
+#footer {
+  border: 1px solid var(--main-red);
+  text-align: center;
+}
