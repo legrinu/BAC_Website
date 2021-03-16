@@ -158,6 +158,20 @@ a{
   margin-bottom: 20px;
 }
 
+@media only screen and (max-width: 600px){
+  #video_top{
+    width: 180px;
+    height: 180px;
+  }
+  #audio_plop{
+    width: 100%;
+  }
+}
+
+#audio_cont, #audio_plop{  
+  padding: 0 12px;
+}
+
 /* PDF Viewer */
 
 /* Abstand zum Boden */
@@ -204,6 +218,18 @@ a{
 
 #pdf_act_page:focus{
   outline:none;
+}
+
+@media only screen and (max-width: 600px) {
+  #prev_page, #next_page{
+    display:flex;      
+  }
+
+  #prev_page, #next_page, #act_page_cont{
+    margin: auto;
+    margin-bottom: 12px;
+    font-size: 0.6rem; 
+  }
 }
 
 /* Die PDF braucht etwas Abstand zur oberen Border */

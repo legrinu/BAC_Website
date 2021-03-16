@@ -124,19 +124,19 @@
 					<form onsubmit="return newPage()" id="pdf_page">
 
 						<button type="button" class="hover_class viewer_btn" id="prev_page">
-							<i class="fas fa-chevron-circle-left"></i>
-							Vorherige Seite
+							<i class="fas fa-chevron-circle-left"></i> Vorherige Seite
 						</button>
 
-						Seite 
-						<input type="text" name="page" id="pdf_act_page">
-						<input type="submit" hidden>
-						von 
-						<span class="page_count"></span>
+						<div id="act_page_cont">	
+							Seite 
+							<input type="text" name="page" id="pdf_act_page">
+							<input type="submit" hidden>
+							von 
+							<span class="page_count"></span>
+						</div>
 
 						<button type="button" class="hover_class viewer_btn" id="next_page">
-							Nächste Seite
-							<i class="fas fa-chevron-circle-right"></i>
+							Nächste Seite <i class="fas fa-chevron-circle-right"></i>
 						</button>
 	
 						<button type="button"  class="hover_class viewer_btn" onclick="window.open('assets/pdf/WhiskyBericht.pdf')">
