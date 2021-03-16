@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<!-- metadata -->
+<head>
+<title>Silberturm Frankfurt</title>	
+<meta charset="utf-8"/>
+<meta name="description" content="Silberturm" />
+<meta name="keywords" content="Skyline, Frankfurt, Webdesign, Silberturm" />
+<meta name="author" content="jonathan.koessmeier" />
+<meta name="robots" content="noindex" />
+<link href="/assets/image/Skyline.ico" rel="shortcut icon" />
+<link href="/assets/styles/Stylesheet_Jonathan_Koessmeier.css" rel="stylesheet" type="text/css" />
+<script src="/assets/javascript/PDFrunningtime.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+
+<!-- Ende metadaten-->
+
+</head>
+<body>
+    <div id="wrapper_Silberturm">
+        <!-- Header Bild-->
+        <div id="header_Silberturm">
+            <div class="bg_silberturm"></div>
+        </div>
+    <!-- Navigation -->
+    <div id="navigation">
+		<ul>
+			<li><a class="hover_class" href="home">Home</a></li>
+			<li><a class="hover_class" href="Leon_Mikolakazaka">Leon</a></li>
+			<li><a class="hover_class" href="Lukas_Blesurius">Lukas Blesius</a></li>
+			<li><a class="hover_class" href="Lukas_Weier">Lukas Weier</a></li>
+			<li><a class="hover_class" href="Sören_Scheibner">Sören</a></li>
+			<li><a class="hover_class" href="/Jonathan_koessmeier.html">Jonathan Kößmeier</a></li>
+		</ul>
+	</div> 
+     <!--Content -->      
+    <div id=content>
+        <!-- Infos zum Silberturm -->
+        <div class=card_Silberturm>
+            <h1>Silberturm in Frankfurt</h1>
+            <p>Der Silberturm in Frankfurt ist der zwöflt größte Turm in Deutschland mit einer Höhe 166,0m. Er bbesteht aus 2 Untergeschossen und 32 Obergeschossen.</p>
+            <P>Aktuell befindet sich die Deutsche Bahn AG bzw. ihre IT-Tochter DB Systel GmbH in dem Turm</P>
+            <img class="image_Silberturm" src= "/assets/image/PANO_20210314_140836.jpg" alt="Silberturm" width="300" height="300">
+            <a href="/assets/pdf/Silberturm.pdf" download>Alle Infos zum Runterladen</a>
+        </div>
+        <!-- Kontaktformuolar-->
+        <div class="card_Silberturm">
+                <h1>Sie haben weitere Fragen zur Frankfurter Skyline?</h1>
+                <h2>Nutzen Sie doch unser Kontaktformular:</h2>
+                <form>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label><br>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname"><br>
+                    <label for="email">E-Mail</label><br>
+                    <input type="email" id="email"><br>
+                    <label for="text_user">Ihr Anliegen</label><br>
+                    <textarea id="text_user" name="text_user"></textarea><br>
+                    <input type="button" value="Submit" onclick="export_pdf()">
+                </form>
+        </div>
+    </div>
+    <!--Footer-->
+    <div id="footer">
+		
+        <address>Jonathan Kößmeier &middot; WS-19-I </address>
+
+    </div>
+        
+    </div>
+</body>
+</html>
