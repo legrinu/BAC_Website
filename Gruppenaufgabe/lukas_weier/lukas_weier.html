@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lukas Smart Home</title>
+    <meta name="LukasSmartHome" content="">
+    <meta name="description" content="SmartHome Steuerung" />
+    <meta name="keywords" content="SmartHome, Residenz, Rick Astley" />
+    <meta name="author" content="Lukas Weier" />
+    <meta name="robots" content="no-index" />
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link href="favicon.ico" rel="icon" type="image/ico" />
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <div class="header">
+                <span class="left">
+                    <a href="lukas_weier.html">Aktuelles</a>
+                    <a href="impressionen.html">Impressionen</a>
+                </span>
+                <a href="https://www.google.com/search?client=opera&q=residenz+donnersberg&sourceid=opera&ie=UTF-8&oe=UTF-8"
+                    target=”_blank”><img src="img/RD_Logo.png" alt="RD Logo" title="RD Logo" width="225"
+                        height="150"></a>
+                <span class="right">
+                    <a>Gruppenseite</a>
+                    <a href="media/SmartHome.pdf" download>Download</a>
+                </span>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <div id="welcome" style="text-align: center; height: 100%;">
+            <canvas id="canvas01" width="300" height="150" style="position: absolute; z-index: -1; margin-top: 20px;">
+                Leider unterstützt ihr Browser kein Canvas.
+            </canvas>
+            <img src="img/room.png" alt="Living Room" style="width: 100%;">
+            <div id="einblenden" onmouseover="make_base('img/blau.png')" onmouseout="make_base('img/orange.png')">
+                Beleuchtung der Zukunft!</div>
+            <div id="scroll" style="position: absolute; width: 100%;">
+                <a href="#section2"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="img/scroll.png"
+                        alt="Scroll Arrow" width="25" height="25"></a>
+            </div>
+        </div>
+
+        <div class="container-rooms">
+            <div class="sub-up">
+                <div class="room"
+                    style="width: 560px; height: 420px; background-size:100% 100%; background-image:url('img/livingroom.png'); ">
+                    <h3 id="section2">Wohnzimmer</h3>
+                    <div class="selection">
+                        <div class="inputs-left">
+                            <div class="input" style="display: flex; flex-direction: row; align-items: center;">
+                                <label style="margin-right: 10px;">Lichtgruppe:</label>
+                                <select id="lightsWZ" name="lightsWZ" size="4" multiple="multiple">
+                                    <option value="Fernsehlicht">Fernsehlicht</option>
+                                    <option value="Couchlicht">Couchlicht</option>
+                                    <option value="Deckenlampe">Deckenlampe</option>
+                                    <option value="Türlicht">Türlicht</option>
+                                </select>
+                            </div>
+                            <div class="input" style="display: flex; align-items: center; justify-content: left;">
+                                <label style="margin-right: 60px;">Farbe:</label>
+                                <input type="color" id="farbeWZ" />
+                            </div>
+                        </div>
+                        <div class="inputs-right">
+                            <div class="input">
+                                <label>Lichter:</label>
+                                <input type="radio" name="switchStateWZ" id="lightOnWZ" /> Ein
+                                <input type="radio" name="switchStateWZ" checked="checked" /> Aus
+                            </div>
+                            <div class="input">
+                                <label>Helligkeit</label>
+                                <input type="range" name="illuminanceWZ" id="illuminanceWZ" min="0" max="100" step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button1"
+                        onclick="GetInformation('lightsWZ', 'farbeWZ', 'lightOnWZ', 'illuminanceWZ')">Schalten</button>
+                </div>
+
+                <div class="room"
+                    style="width: 560px; height: 420px; background-size:100% 100%; background-image:url('img/bedroom.png') ;">
+                    <h3>Schlafzimmer</h3>
+                    <div class="selection">
+                        <div class="inputs-left">
+                            <div class="input" style="display: flex; flex-direction: row; align-items: center;">
+                                <label style="margin-right: 10px;">Lichtgruppe:</label>
+                                <select id="lightsSZ" name="lightsSZ" size="4" multiple="multiple">
+                                    <option value="Monitorbeleuchtung">Monitore</option>
+                                    <option value="Lautsprecher">Lautsprecher</option>
+                                    <option value="Nachttischlampe">Nachttisch</option>
+                                    <option value="Deckenlampe">Deckenlampe</option>
+                                </select>
+                            </div>
+                            <div class="input" style="display: flex; align-items: center; justify-content: left;">
+                                <label style="margin-right: 60px;">Farbe:</label>
+                                <input type="color" id="farbeSZ" />
+                            </div>
+                        </div>
+                        <div class="inputs-right">
+                            <div class="input">
+                                <label>Lichter:</label>
+                                <input type="radio" name="switchStateSZ" id="lightOnSZ" /> Ein
+                                <input type="radio" name="switchStateSZ" checked="checked" /> Aus
+                            </div>
+                            <div class="input">
+                                <label>Helligkeit</label>
+                                <input type="range" name="illuminaceSZ" id="illuminanceSZ" min="0" max="100" step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button1"
+                        onclick="GetInformation('lightsSZ', 'farbeSZ', 'lightOnSZ', 'illuminanceSZ')">Schalten</button>
+                </div>
+            </div>
+
+            <div class="sub-down">
+                <div class="room"
+                    style="width: 560px; height: 420px; background-size:100% 100%; background-image:url('img/kitchen.png') ;">
+                    <h3>Küche</h3>
+                    <div class="selection">
+                        <div class="inputs-left">
+                            <div class="input" style="display: flex;">
+                                <label style="margin-right: 10px;">Lichtgruppe:</label>
+                                <select id="lightsKüche" name="lightsKüche" size="2" multiple="multiple">
+                                    <option value="Deckenlampe">Deckenlampe</option>
+                                    <option value="Schranklicht">Schranklicht</option>
+                                </select>
+                            </div>
+                            <div class="input" style="display: flex; align-items: center; justify-content: left;">
+                                <label style="margin-right: 60px;">Farbe:</label>
+                                <input type="color" id="farbeKüche" />
+                            </div>
+                        </div>
+                        <div class="inputs-right">
+                            <div class="input">
+                                <label>Lichter:</label>
+                                <input type="radio" name="switchStateKüche" id="lightOnKüche" /> Ein
+                                <input type="radio" name="switchStateKüche" checked="checked" /> Aus
+                            </div>
+                            <div class="input">
+                                <label>Helligkeit</label>
+                                <input type="range" name="illuminanceKüche" id="illuminanceKüche" min="0" max="100"
+                                    step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button1"
+                        onclick="GetInformation('lightsKüche', 'farbeKüche', 'lightOnKüche', 'illuminanceKüche')">Schalten</button>
+                </div>
+
+                <div class="room"
+                    style="width: 560px; height: 420px; background-size:100% 100%; background-image:url('img/bath.png') ;">
+                    <h3>Badezimmer</h3>
+                    <div class="selection">
+                        <div class="inputs-left">
+                            <div class="input" style="display: flex;">
+                                <label style="margin-right: 10px;">Lichtgruppe:</label>
+                                <select id="lightsBad" name="lightsBad" size="2" multiple="multiple">
+                                    <option value="Deckenlampe">Deckenlampe</option>
+                                    <option value="Spiegellicht">Spiegellicht</option>
+                                </select>
+                            </div>
+                            <div class="input" style="display: flex; align-items: center; justify-content: left;">
+                                <label style="margin-right: 60px;">Farbe:</label>
+                                <input type="color" id="farbeBad" />
+                            </div>
+                        </div>
+                        <div class="inputs-right">
+                            <div class="input">
+                                <label>Lichter:</label>
+                                <input type="radio" name="switchStateBad" id="lightOnBad" /> Ein
+                                <input type="radio" name="switchStateBad" checked="checked" /> Aus
+                            </div>
+                            <div class="input">
+                                <label>Helligkeit</label>
+                                <input type="range" name="illuminaceBad" id="illuminanceBad" min="0" max="100" step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button1"
+                        onclick="GetInformation('lightsBad', 'farbeBad', 'lightOnBad', 'illuminanceBad')">Schalten</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <a id="footer_text" href="kontakt.html">&#169; Lukas Weier</a>
+    </footer>
+
+    <script>
+        var canvas = document.getElementById("canvas01"),
+            context = canvas.getContext("2d");
+        make_base();
+
+        function make_base(image = "img/orange.png") {
+            base_image = new Image();
+            base_image.src = image;
+            base_image.onload = function () {
+                context.drawImage(base_image, 0, 0);
+            }
+        }
+
+        function bigImg(x) {
+            x.style.height = "30px";
+            x.style.width = "30px";
+        }
+
+        function normalImg(x) {
+            x.style.height = "25px";
+            x.style.width = "25px";
+        }
+
+        function GetInformation(group_name, color_name, light_name, illuminance_name) {
+            var group = document.getElementById(group_name).value;
+            var color = document.getElementById(color_name).value;
+            var light = document.getElementById(light_name).checked;
+            if (light) {
+                var light_text = "eingeschaltet."
+            } else {
+                var light_text = "ausgeschaltet."
+            }
+            var illuminance = document.getElementById(illuminance_name).value;
+            if (!group) {
+                var text = "Bitte wähle eine Lichtgruppe aus!";
+            } else {
+                var text = "Die Lampen " + group + " wurden mit der Farbe " + color + " und der Helligkeit " + illuminance + "% " + light_text;
+            }
+            alert(text);
+        }
+    </script>
+</body>
+
+</html>
