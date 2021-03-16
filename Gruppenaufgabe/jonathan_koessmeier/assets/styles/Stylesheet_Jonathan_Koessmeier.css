@@ -23,7 +23,7 @@ audio{
 
   .bg {
 	/* Background image */
-    background-image: url("/assets/image/IMG_20201129_160325912_HDR.jpg");
+    background-image: url("../image/IMG_20201129_160325912_HDR.jpg");
 	/* Höhe des Background images */
     height: 100%; 
 	/*Fixierung des BG */
@@ -35,7 +35,7 @@ audio{
 
 .bg_silberturm{
 	/* Background image */
-    background-image: url("/assets/image/IMG_20191009_182450857_HDR.jpg");
+    background-image: url("../image/IMG_20191009_182450857_HDR.jpg");
 
 	/* Höhe des Background images */
     height: 100%; 
@@ -155,7 +155,7 @@ p{
 #navigation ul li{
 	/*Festlegung der Schriftgröße*/
 	margin-right: 0%;
-	margin-left: 5%;
+	margin-left: 2.5%;
 	text-align: center;
 	display:inline;
 	font-size:1vw;
@@ -163,15 +163,6 @@ p{
 	
 
   }
-#navigation a {
-
-
-}
-
-
-
-
-
  
 	
 #wrapper{

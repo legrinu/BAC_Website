@@ -19,7 +19,7 @@ window.onload = () => {
     }
 
     const image = new Image(size.width, size.height);
-    image.src = "/assets/image/logo.png";
+    image.src = "assets/image/logo.png";
 
     let canvas_step = (timestamp) => {
         if (start === undefined)
