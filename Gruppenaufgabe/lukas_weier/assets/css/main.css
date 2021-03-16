@@ -6,13 +6,19 @@ html {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-header {
-    padding: 32px 0;
-}
+
+/*Room name*/
 
 h3 {
     text-align: center;
     position: relative;
+}
+
+
+/*Navigation bar*/
+
+header {
+    padding: 32px 0;
 }
 
 .header {
@@ -40,6 +46,9 @@ nav .header .right {
     justify-content: space-around;
     align-items: center;
 }
+
+
+/*Room styling*/
 
 label {
     margin: 10px 0;
@@ -98,6 +107,13 @@ label {
     flex-direction: column;
 }
 
+.input {
+    margin: 10px 0;
+}
+
+
+/*Button1 for Rooms, Button2 for Kontakt.html*/
+
 .button1 {
     position: relative;
     border: none;
@@ -132,6 +148,9 @@ label {
     color: white;
 }
 
+
+/*Basic Container for margin at the sides*/
+
 .container {
     display: flex;
     flex-direction: column;
@@ -151,18 +170,16 @@ label {
     padding: 40px 0;
 }
 
-.input {
-    margin: 10px 0;
-}
+
+/*Kontakt Formular*/
 
 .kontakteingabe {
     display: flex;
     flex-direction: column;
 }
 
-#welcome {
-    padding-bottom: 400px;
-}
+
+/*Motto centerd*/
 
 #einblenden {
     margin-top: -400px;
@@ -171,9 +188,16 @@ label {
     font-size: 500%;
 }
 
+#welcome {
+    padding-bottom: 400px;
+}
+
 #scroll {
     margin-top: 315px;
 }
+
+
+/*Footer Settings*/
 
 #footer_text {
     color: white;
@@ -189,6 +213,9 @@ label {
     text-align: center;
     padding: 5px 0;
 }
+
+
+/*Media Query for Impressionen page, when on small device with screen*/
 
 @media only screen and (max-width: 1500px) {
     .content-left,
