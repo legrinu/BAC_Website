@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<!-- metadata -->
+<head>
+	<title>City@Night | Lukas Blesius</title>
+
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Püfungsleistung von Lukas Blesius für die Veranstaltung: Elektronische Dokumente und Web-Design" />
+	<meta name="keywords" content="Prüfungsleistung, Lukas Blesius, WS-19-I, Web-Design" />
+	<meta name="author" content="Lukas Blesius" />
+	<meta name="robots" content="noindex" />
+
+	<link href="assets/images/favicon.ico" rel="shortcut icon"/>
+	<link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css" />
+	<script src="assets/scripts/script.js" charset="utf-8"></script>
+	<script src="assets/scripts/media_stop.js" charset="utf-8"></script>
+
+</head>
+
+<!-- visible content -->
+<body>
+<div id="wrapper">
+	<div id="navigation">
+		<nav>
+			<ul id="ul_nav">
+				<li><a class="hover_class" href="../index.html">Home</a></li>
+				<li><a class="hover_class" href="../jonathan_koessmeier/jonathan_koessmeier.html">Jonathan Kößmeier</a></li>
+				<li><a class="hover_class" href="./leon_mikolajczak/leon_mikolajczak.html">Leon Mikolajczak</a></li>
+				<li><a class="hover_class" href="../lukas_blesius/lukas_blesius.html">Lukas Blesius</a></li>
+				<li><a class="hover_class" href="../lukas_weier/lukas_weier.html">Lukas Weier</a></li>
+				<li><a class="hover_class" href="./soeren_scheibner/soeren_scheibner.html">Sören Scheibner</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div id="content"> <!-- content -->
+		<section class="class_block">
+			<div id="block1">
+				<img src="assets/images/block1.JPG" alt="Skyline bei Nacht">
+				<div class="centered_content">
+					<h1>City @ Night</h1>
+				</div>
+			</div>
+		</section>
+
+		<section class="class_block">
+			<div id="block2">
+				<div id="block2_images">
+					<ul>
+						<li>
+							<img class="images_block2" src="assets/images/block2_1.JPG" alt="Bunt beleuchtetes Treppenhaus">
+						</li>
+						<li>
+							<img class="images_block2" src="assets/images/block2_2.jpeg" alt="Person auf Stahlkonstruktion">
+						</li>
+						<li>
+							<img class="images_block2" src="assets/images/block2_3.jpeg" alt="Skyline bei Nacht">
+						</li>
+					</ul>
+				</div>
+				<div class="centered_content text_block">
+					<h1>Die Stadt bei Nacht</h1>
+					<p>Die Stadt, die niemals schläft und wo alles möglich ist, ist ein Ort, in dem jeder danach strebt oder zumindest vorgibt, ein Gewinner zu sein.</p>
+					<h2>Beispiel Geräusche bei Nacht</h2>
+					<p>In dieser Audiodatei haben sich drei Nachtgeräusche versteckt.</p>
+					<audio id="audioElement" preload controls>
+						<source src="assets/audios/audio.ogg" type="audio/ogg">
+						<source src="assets/audios/audio.wav" type="audio/wav">
+						<source src="assets/audios/audio.mp3" type="audio/mp3">
+						<p>Der Browser unterstützt keine Audio-Wiedergabe.</p>
+					</audio> 
+				</div>
+			</div>
+		</section>
+
+		<section class="class_block">
+			<div id="block3">
+				<img src="assets/images/block3.JPG" alt="Sonnenaufgang">
+				<div class="centered_content">
+					<video id="videoElement" width="1600" height="900" preload autoplay loop muted>
+						<source src="assets/videos/leere_strasse.av1.mp4" type="video/av1">
+						<source src="assets/videos/leere_strasse.webm" type="video/webm">
+						<source src="assets/videos/leere_strasse.mov" type="video/mov">
+						<p>Der Browser unterstützt keine Video-Wiedergabe.</p>
+					</video>
+					<script>
+						
+						</script>
+				</div>
+			</div>
+		</section>
+
+		<section class="class_block">
+			<div id="block4">
+				<img src="assets/images/block4.JPG" alt="Hafen bei Nacht">
+				<div class="centered_content">
+					<canvas id="canvas_element" width="1600" height="900" >
+						Your browser does not support the HTML canvas tag.</canvas>
+				</div>
+				<script>
+					    let canvas_element = document.getElementById("canvas_element");
+						let context = canvas_element.getContext("2d");
+						for (i = 0; i < 33; i++) {
+							let x = Math.random() * window.innerWidth;
+							let y = Math.random() * window.innerHeight;
+							let r = Math.random() * 120 + 30;
+							context.beginPath();
+							context.arc(x, y, r, 0, 2 * Math.PI);
+							context.fillStyle = '#2E281F';
+							context.fill();
+						}
+				</script>
+			</div>
+		</section>
+
+		<section class="class_block">
+			<div id="block5">
+				<img src="assets/images/block5.JPG" alt="Nasse Straße bei Nacht">
+				<div class="centered_content text_block">
+					<p>Hier kann man eine PDF runterladen:</p>
+					<form action="assets/documents/lukas_blesius.pdf" method="get" target="_blank">
+						<input type="submit" value="Download">
+					</form>
+				</div>
+			</div>
+		</section>
+
+	</div>
+	<div id="footer">
+		<footer>
+			<address>© 2021 <a href="mailto:lukas.blesius@gmail.com">Lukas Blesius</a></address>
+		</footer>
+	</div>
+</div> <!-- wrapper -->	
+</body>
+</html>

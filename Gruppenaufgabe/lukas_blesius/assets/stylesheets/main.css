@@ -1,0 +1,131 @@
+/* CSS3 */
+
+/* All */
+* {
+  margin: 0;
+  padding: 0;
+  color: #D66E6C;
+  font-size: 1em;
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+}
+
+/* Elemente */
+html{
+  /*Snapscroll*/
+	scroll-snap-type: y mandatory;
+  /*Background*/
+  background-color: #2E281F;
+}
+
+section{
+  /*Dimensionen*/
+  height: 100vh;
+    /*Scrollbar-Problem->overflow*/
+  width: 100%;
+
+  /*Anordnung*/
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  
+  /*Snap scroll*/
+  scroll-snap-align: start;
+}
+
+li a{
+  /*Ausrichtung*/
+  float: left;
+  display: block;
+  text-align: center;
+
+  /*Stil der Blöcke: Größe(Höhe, Breite), Dekoration, Schriftfarbe*/
+  padding: 14px 16px;
+  text-decoration: none;/*Unterstriche*/
+  color: #D9B343;
+}
+ul{
+  /*Stil, keine Aufzählungspunkte*/
+  list-style-type: none;
+}
+
+/*Hover Funktion*/
+li a:hover {
+  background-color: #733702;
+}
+/*Zeilenabstand nach:*/
+h1, h2{
+  /*Zeilenabstand nach Überschrift*/
+  padding-bottom: 0.5em;
+}
+p{
+  padding-bottom: 1em;
+}
+
+/*Schriftgröße*/
+h1{
+  font-size: 2em;
+}
+h2{
+  font-size: 1.5em;
+}
+
+nav{
+  /*Snap Scroll*/
+  scroll-snap-align: start;
+}
+
+footer{
+  /*Textausrichtung*/
+  text-align: center;
+  /*Snap Scroll*/
+  scroll-snap-align: start;
+}
+
+img {
+  width: 100%;
+  object-fit: contain
+}
+
+canvas{
+  /*Umrandung*/
+  border:1px solid #D9B343;
+  border-radius: 15px;
+}
+
+
+/* Klasse . */
+.centered_content{
+  /*Postion losgelöst*/
+  position: absolute;
+  /*Ausrichtung mittig*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.text_block{
+  /*Umrandungsgröße der Textbox*/
+  padding: 20px;
+  border-radius: 15px;
+  /*Hintergrund leicht transparent*/
+  background-color: rgba(46, 40, 31, 0.8);
+}
+
+/*Überlauf verhindern*/
+.class_block{
+  overflow:hidden;
+}
+
+.images_block2{
+  width: 120%;
+  object-fit: contain
+}
+
+/* IDs # */
+#block2_images {
+  /*Drei Spalten*/
+  columns: 3;
+}
+
+/* Media */
