@@ -49,7 +49,6 @@ article > p{
   margin-bottom: 12px;
 }
 
-
 a{
   cursor:pointer;
 }
@@ -100,6 +99,18 @@ a{
   border-radius: 2px;
   padding: 12px 20px;
   cursor: pointer; 
+}
+
+@media only screen and (max-width: 900px) {
+  .overlay_content a  {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .overlay_content a  {
+    font-size: 0.6rem;
+  }
 }
 
 /* Menu Overlay Ende */
