@@ -2,59 +2,58 @@
 <html lang="de">
 
 <head>
-	<meta charset="utf-8">
-	<title>Lukas Smart Home</title>
-	<meta name="LukasSmartHome" content="">
-	<meta name="description" content="SmartHome Steuerung" />
-	<meta name="keywords" content="SmartHome, Residenz, Rick Astley" />
-	<meta name="author" content="Lukas Weier" />
-	<meta name="robots" content="no-index" />
+    <meta charset="utf-8">
+    <title>Lukas Smart Home</title>
+    <meta name="LukasSmartHome" content="">
+    <meta name="description" content="SmartHome Steuerung" />
+    <meta name="keywords" content="SmartHome, Residenz, Rick Astley" />
+    <meta name="author" content="Lukas Weier" />
+    <meta name="robots" content="no-index" />
 
-	<!-- Html2Pdf -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"> </script>
+    <!-- Html2Pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js">
+    </script>
 
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
 
-	<link href="favicon.ico" rel="icon" type="image/ico" />
+    <link href="favicon.ico" rel="icon" type="image/ico" />
 </head>
 
 <body>
-	<header>
+    <header>
 
-		<nav>
-			<div class="header">
-				<span class="left">
+        <nav>
+            <div class="header">
+                <span class="left">
 					<a href="lukas_weier.html">Aktuelles</a>
 					<a href="impressionen.html">Impressionen</a>
 				</span>
-				<a href="https://www.google.com/search?client=opera&q=residenz+donnersberg&sourceid=opera&ie=UTF-8&oe=UTF-8"
-					target=”_blank”><img src="img/RD_Logo.png" alt="RD Logo" title="RD Logo" width="225"
-						height="150"></a>
-				<span class="right">
-					<a>Gruppenseite</a>
-					<a href="media/SmartHome.pdf" download>Download</a>
+                <a href="https://www.google.com/search?client=opera&q=residenz+donnersberg&sourceid=opera&ie=UTF-8&oe=UTF-8" target=”_blank”><img src="img/RD_Logo.png" alt="RD Logo" title="RD Logo" width="225" height="150"></a>
+                <span class="right">
+					<a href="../index.html">Gruppenseite</a>
+					<a href="assets/media/SmartHome.pdf" download>Download</a>
 				</span>
-			</div>
-		</nav>
+            </div>
+        </nav>
 
-	</header>
-	<main>
-		<h2 style="text-align: center;">Sie würden gerne Kontakt aufnehmen?</h2>
-		<div class="container">
-			<div id="kontakt">
-				<form id="form-print" enctype="text/plain">
-					<fieldset class="kontakteingabe">
-						<label for="Vorname">
+    </header>
+    <main>
+        <h2 style="text-align: center;">Sie würden gerne Kontakt aufnehmen?</h2>
+        <div class="container">
+            <div id="kontakt">
+                <form id="form-print" enctype="text/plain">
+                    <fieldset class="kontakteingabe">
+                        <label for="Vorname">
 							<strong>Vorname:</strong><br>
 							<input type="text" id="Vorname" name="Vorname" placeholder="Vornamen eingeben">
 						</label>
-						<label for="Nachname">
+                        <label for="Nachname">
 							<strong>Nachname:</strong><br>
 							<input type="text" id="Nachname" name="Nachname" placeholder="Nachnamen eingeben">
 						</label>
-						<label for="Grund">
+                        <label for="Grund">
 							<strong>Grund für ihr Anliegen:</strong><br>
 							<select id="Grund" name="Grund">
 								<option value="Lob"> Lob</option>
@@ -62,33 +61,40 @@
 								<option value="Anmerkung">Anmerkung</option>
 							</select>
 						</label>
-						<label for="Nachricht">
+                        <label for="Nachricht">
 							<strong>Ihre Nachricht:</strong><br>
 							<textarea id="Nachricht" name="Nachricht" style="height: 195px;"></textarea>
 						</label>
-					</fieldset>
-				</form>
-			</div>
-			<button class="button2" onclick="generatePDF()" style="margin-top: 20px;">Senden</button>
-		</div>
-	</main>
-	<footer id="footer">
-		<a id="footer_text" href="kontakt.html">&#169; Lukas Weier</a>
-	</footer>
+                    </fieldset>
+                </form>
+            </div>
+            <button class="button2" onclick="generatePDF()" style="margin-top: 20px;">Senden</button>
+        </div>
+    </main>
+    <footer id="footer">
+        <a id="footer_text" href="kontakt.html">&#169; Lukas Weier</a>
+    </footer>
 
-	<script>
-		function generatePDF() {
-			var element = document.getElementById("form-print");
+    <script>
+        function generatePDF() {
+            var element = document.getElementById("form-print");
 
-			html2pdf(element, {
-				margin: 10,
-				filename: "ResidenzDonnersbergPDF",
-				image: { type: "jpeg", quality: 0.98 },
-				jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
-			})
-				.save();
-		}
-	</script>
+            html2pdf(element, {
+                    margin: 10,
+                    filename: "ResidenzDonnersbergPDF",
+                    image: {
+                        type: "jpeg",
+                        quality: 0.98
+                    },
+                    jsPDF: {
+                        unit: "mm",
+                        format: "a4",
+                        orientation: "portrait"
+                    }
+                })
+                .save();
+        }
+    </script>
 </body>
 
 </html>
