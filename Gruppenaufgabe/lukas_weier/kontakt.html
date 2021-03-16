@@ -11,19 +11,17 @@
     <meta name="robots" content="no-index" />
 
     <!-- Html2Pdf -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"></script>
 
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
-
 
     <link href="favicon.ico" rel="icon" type="image/ico" />
 </head>
 
 <body>
     <header>
-
+        <!--Navigation bar-->
         <nav>
             <div class="header">
                 <span class="left">
@@ -42,43 +40,47 @@
     <main>
         <h2 style="text-align: center;">Sie würden gerne Kontakt aufnehmen?</h2>
         <div class="container">
-            <div id="kontakt">
-                <form id="form-print" enctype="text/plain">
-                    <fieldset class="kontakteingabe">
-                        <label for="Vorname">
-							<strong>Vorname:</strong><br>
-							<input type="text" id="Vorname" name="Vorname" placeholder="Vornamen eingeben">
-						</label>
-                        <label for="Nachname">
-							<strong>Nachname:</strong><br>
-							<input type="text" id="Nachname" name="Nachname" placeholder="Nachnamen eingeben">
-						</label>
-                        <label for="Grund">
-							<strong>Grund für ihr Anliegen:</strong><br>
-							<select id="Grund" name="Grund">
-								<option value="Lob"> Lob</option>
-								<option value="Fragen">Fragen</option>
-								<option value="Anmerkung">Anmerkung</option>
-							</select>
-						</label>
-                        <label for="Nachricht">
-							<strong>Ihre Nachricht:</strong><br>
-							<textarea id="Nachricht" name="Nachricht" style="height: 195px;"></textarea>
-						</label>
-                    </fieldset>
-                </form>
-            </div>
+            <!--form-print for converting to pdf -->
+            <form id="form-print" enctype="text/plain">
+                <fieldset class="kontakteingabe">
+                    <label for="Vorname">
+						<strong>Vorname:</strong><br>
+						<input type="text" id="Vorname" name="Vorname" placeholder="Vornamen eingeben">
+					</label>
+                    <label for="Nachname">
+						<strong>Nachname:</strong><br>
+						<input type="text" id="Nachname" name="Nachname" placeholder="Nachnamen eingeben">
+					</label>
+                    <label for="Grund">
+						<strong>Grund für ihr Anliegen:</strong><br>
+						<select id="Grund" name="Grund">
+							<option value="Lob"> Lob</option>
+							<option value="Fragen">Fragen</option>
+							<option value="Anmerkung">Anmerkung</option>
+						</select>
+					</label>
+                    <label for="Nachricht">
+						<strong>Ihre Nachricht:</strong><br>
+						<textarea id="Nachricht" name="Nachricht" style="height: 195px;"></textarea>
+					</label>
+                </fieldset>
+            </form>
+            <!--Button on Click for generatePDF function-->
             <button class="button2" onclick="generatePDF()" style="margin-top: 20px;">Senden</button>
         </div>
     </main>
+
+    <!--Footer-->
     <footer id="footer">
         <a id="footer_text" href="kontakt.html">&#169; Lukas Weier</a>
     </footer>
 
     <script>
         function generatePDF() {
+            //get Information
             var element = document.getElementById("form-print");
 
+            //printPDF
             html2pdf(element, {
                     margin: 10,
                     filename: "ResidenzDonnersbergPDF",

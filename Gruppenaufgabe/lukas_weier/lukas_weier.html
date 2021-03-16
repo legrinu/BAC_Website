@@ -18,7 +18,7 @@
 
 <body>
     <header>
-
+        <!--Navigation bar-->
         <nav>
             <div class="header">
                 <span class="left">
@@ -36,6 +36,7 @@
     </header>
 
     <main>
+        <!--Start Image-->
         <div id="welcome" style="text-align: center; height: 100%;">
             <canvas id="canvas01" width="300" height="150" style="position: absolute; z-index: -1; margin-top: 20px;">
                 Leider unterstützt ihr Browser kein Canvas.
@@ -48,8 +49,11 @@
             </div>
         </div>
 
+        <!--Room Selection-->
         <div class="container-rooms">
+            <!--Zwei Zimmer oben-->
             <div class="sub-up">
+                <!--Raum Wohnzimmer-->
                 <div class="room" style="width: 560px; height: 420px; background-size:100% 100%; background-image:url('assets/img/livingroom.png'); ">
                     <h3 id="section2">Wohnzimmer</h3>
                     <div class="selection">
@@ -83,6 +87,7 @@
                     <button class="button1" onclick="GetInformation('lightsWZ', 'farbeWZ', 'lightOnWZ', 'illuminanceWZ')">Schalten</button>
                 </div>
 
+                <!--Raum Schlafzimmer-->
                 <div class="room" style="width: 560px; height: 420px; background-size:100% 100%; background-image:url('assets/img/bedroom.png') ;">
                     <h3>Schlafzimmer</h3>
                     <div class="selection">
@@ -117,7 +122,9 @@
                 </div>
             </div>
 
+            <!--Zwei Zimmer unten-->
             <div class="sub-down">
+                <!--Raum Küche-->
                 <div class="room" style="width: 560px; height: 420px; background-size:100% 100%; background-image:url('assets/img/kitchen.png') ;">
                     <h3>Küche</h3>
                     <div class="selection">
@@ -149,6 +156,7 @@
                     <button class="button1" onclick="GetInformation('lightsKüche', 'farbeKüche', 'lightOnKüche', 'illuminanceKüche')">Schalten</button>
                 </div>
 
+                <!--Raum Badezimmer-->
                 <div class="room" style="width: 560px; height: 420px; background-size:100% 100%; background-image:url('assets/img/bath.png') ;">
                     <h3>Badezimmer</h3>
                     <div class="selection">
@@ -183,11 +191,14 @@
         </div>
     </main>
 
+    <!--Footer-->
     <footer id="footer">
         <a id="footer_text" href="kontakt.html">&#169; Lukas Weier</a>
     </footer>
 
+    <!--Java Script-->
     <script>
+        //Canvas Function for different colors
         var canvas = document.getElementById("canvas01"),
             context = canvas.getContext("2d");
         make_base();
@@ -200,6 +211,7 @@
             }
         }
 
+        //Scroll Arrow zoom on hover
         function bigImg(x) {
             x.style.height = "30px";
             x.style.width = "30px";
@@ -210,16 +222,17 @@
             x.style.width = "25px";
         }
 
+        //Collecting Data from Rooms to send alert
         function GetInformation(group_name, color_name, light_name, illuminance_name) {
             var group = document.getElementById(group_name).value;
             var color = document.getElementById(color_name).value;
             var light = document.getElementById(light_name).checked;
+            var illuminance = document.getElementById(illuminance_name).value;
             if (light) {
                 var light_text = "eingeschaltet."
             } else {
                 var light_text = "ausgeschaltet."
             }
-            var illuminance = document.getElementById(illuminance_name).value;
             if (!group) {
                 var text = "Bitte wähle eine Lichtgruppe aus!";
             } else {
